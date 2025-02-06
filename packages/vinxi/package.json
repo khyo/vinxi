@@ -1,5 +1,5 @@
 {
-  "name": "vinxi",
+  "name": "@khyo/vinxi",
   "version": "0.5.1",
   "type": "module",
   "author": "Nikhil Saraf <nsaraf98@gmail.com>",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nksaraf/vinxi.git",
+    "url": "git+https://github.com/khyo/vinxi.git",
     "directory": "packages/vinxi"
   },
   "scripts": {

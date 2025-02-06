@@ -1,10 +1,2 @@
 packages:
-  - "packages/**"
-  - "examples/**"
-  - "frameworks/**"
-  - "test/"
-  - "test/templates/**"
-  - "docs/**"
-  - 'talks/**'
-  - "!**/.tmp/**"
-
+  - "packages/vinxi"

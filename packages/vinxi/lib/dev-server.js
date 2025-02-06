@@ -40,6 +40,8 @@ export async function createViteDevServer(config) {
 	return vite.createServer(config);
 }
 
+let ws_port = 9999
+
 /**
  *
  * @param {import('./app.js').App} app
@@ -49,8 +51,8 @@ export async function createViteDevServer(config) {
  */
 export async function createViteHandler(router, app, serveConfig) {
 	const vite = await import("vite");
-	const { getRandomPort } = await import("get-port-please");
-	const port = await getRandomPort();
+	ws_port = (ws_port > 4103) ? 4101 : ws_port + 1
+	const port = ws_port;
 	const plugins = [
 		// ...(serveConfig.devtools ? [inspect()] : []),
 		...(((await router.internals.type.dev.plugins?.(router, app)) ?? []).filter(
@@ -82,7 +84,8 @@ export async function createViteHandler(router, app, serveConfig) {
 			},
 			middlewareMode: true,
 			hmr: {
-				port,
+				port: port+10,
+    		clientPort: port,
 			},
 			https: serveConfig.https,
 		},
