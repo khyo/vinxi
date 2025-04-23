@@ -86,6 +86,7 @@ export async function createViteHandler(router, app, serveConfig) {
 			hmr: {
 				port: port+10,
     		clientPort: port,
+				...router.server?.hmr,
 			},
 			https: serveConfig.https,
 		},

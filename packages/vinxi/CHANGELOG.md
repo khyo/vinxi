@@ -1,5 +1,27 @@
 # vinxi
 
+## 0.5.4
+
+### Patch Changes
+
+- 6bb17d02: Update Nitro to 2.11.1
+- 1f899056: feat: allow custom HMR configuration on a per router basis
+- 6d71612e: feat: allow custom `clearScreen` configuration
+
+## 0.5.3
+
+### Patch Changes
+
+- 09cd59b1: enable vite mode flag via cli
+- 696defe4: Fix a regression that caused css imported with sideeffects such as `?url`, to be rendered during ssr (in dev).
+- fd93107b: fix: use CLI-given config file
+
+## 0.5.2
+
+### Patch Changes
+
+- b85ab82c: Update unstorage
+
 ## 0.5.1
 
 ### Patch Changes
